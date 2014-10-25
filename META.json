@@ -1,0 +1,65 @@
+{
+   "abstract" : "A collection of scripts using Marpa::R2",
+   "author" : [
+      "Ron Savage <ron@savage.net.au>"
+   ],
+   "dynamic_config" : 1,
+   "generated_by" : "Module::Build version 0.421",
+   "license" : [
+      "artistic_2"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "MarpaX-Demo-SampleScripts",
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "Test::More" : "0.94"
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "Module::Build" : "0.38"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Capture::Tiny" : "0.25",
+            "Data::Dumper" : "2.145",
+            "Data::Section" : "0.200006",
+            "File::Slurp" : "9999.19",
+            "Marpa::R2" : "2.096",
+            "Marpa::R2::HTML" : "2.096",
+            "Moo" : "1.006001",
+            "POSIX" : "1.32",
+            "Try::Tiny" : "0.22",
+            "Types::Standard" : "1.000004",
+            "charnames" : "0",
+            "diagnostics" : "0",
+            "open" : "0",
+            "perl" : "5.01",
+            "strict" : "0",
+            "utf8" : "0",
+            "warnings" : "0"
+         }
+      }
+   },
+   "provides" : {
+      "MarpaX::Demo::SampleScripts" : {
+         "file" : "lib/MarpaX/Demo/SampleScripts.pm",
+         "version" : "1.00"
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "license" : [
+         "http://opensource.org/licenses/artistic-license-2.0.php"
+      ],
+      "repository" : {
+         "url" : "https://github.com/ronsavage/MarpaX-Demo-SampleScripts"
+      }
+   },
+   "version" : "1.00"
+}
