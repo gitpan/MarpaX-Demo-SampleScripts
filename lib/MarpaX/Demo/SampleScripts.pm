@@ -23,7 +23,7 @@ use Try::Tiny;
 
 use Types::Standard qw/Any ArrayRef HashRef Int Str/;
 
-our $VERSION = '1.00';
+our $VERSION = '1.02';
 
 # ------------------------------------------------
 
@@ -133,6 +133,20 @@ Process defective HTML.
 
 Match nested parantheses, i.e. the '(' and ')' pair.
 
+=item o match.parentheses.02.pl
+
+This sophisticated example checks files for matching brackets: (){}[].
+
+Or, it can be run (self-tested) with the '--test' option'.
+
+The new rejection events are used, along with the Ruby Slippers, meaning it requires L<Marpa::R2>
+V 2.098000.
+
+This program uses the method of adding known tokens (my $suffix = '(){}[]';) to the end of the input
+string so Marpa can be told to search just that part of the string when the logic dictates that a
+Ruby Slippers token (bracket) is to be passed to Marpa to satisfy the grammar. It's put at the end
+so that it does not interfere with line and column counts in the original input string.
+
 =item o parmaterized.grammar.01.pl
 
 Handle parts of the grammar as strings, and interpolate various things into those strings, before
@@ -161,6 +175,14 @@ Handle nested, double-quoted, strings.
 Handle strings quoted with various characters, and with escaped characters in there too.
 
 =item o quoted.strings.04.pl
+
+Uses a grammar with pauses to handle various types of quoted strings, with manual scanning.
+
+See quoted.strings.05.pl for getting Marpa to handling the scanning of HTML.
+
+=item o quoted.strings.05.pl
+
+Handles HTML.
 
 =over 4
 
@@ -220,6 +242,10 @@ refuses to fix.
 
 =head1 FAQ
 
+=head2 Do any scripts handle HTML?
+
+Yes. See scripts/quoted.strings.05.pl.
+
 =head1 Machine-Readable Change Log
 
 The file Changes was converted into Changelog.ini by L<Module::Metadata::Changes>.
@@ -240,7 +266,7 @@ L<MarpaX::Demo::SampleScripts> was written by Ron Savage I<E<lt>ron@savage.net.a
 
 Marpa's homepage: <http://savage.net.au/Marpa.html>.
 
-Homepage: L<http://savage.net.au/>.
+My homepage: L<http://savage.net.au/>.
 
 =head1 Copyright
 
